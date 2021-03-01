@@ -19,6 +19,6 @@ function [X_NEW, ERR] = gauss_seidel_relax(A, B, X_PREV, lambda)
     
     X_NEW = [x1_relax; x2_relax; x3_relax];
     
-    ERR = [approxError(X_PREV(1,1), x1_curr), approxError(...
-        X_PREV(2,1), x2_curr), approxError(X_PREV(3,1), x3_curr)]
+    ERR = [approxError(x1_curr, X_PREV(1,1)), approxError(...
+        x2_curr, X_PREV(2,1)), approxError(x3_curr, X_PREV(3,1))]
 end
