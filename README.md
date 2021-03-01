@@ -6,3 +6,4 @@ Matlab code for common Numerical Methods methods and functions. Current implemen
 - Bisection method
 - False Position
 - Newtown Raphson Method
+- Gauss Seidel Method w/ Relaxation
