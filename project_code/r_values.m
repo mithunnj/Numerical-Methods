@@ -3,6 +3,8 @@ function [r_new] = r_values(td,n,r,g_new)
         td: Tridiagonal matrix 
         n: Size of the tridagonal matrix in the form (# of rows, # of columns)
             You can parse this like this: rows = n(1,1), columns = n(1,2) 
+        r: This is the forcing values represented in a r column vector
+        g_new: These are the g values calculated from the g_values function.
     %}
 
     r_new = []; % Initialize array to store all the computed g_values

@@ -10,6 +10,6 @@ function [M,R] = generate_tridiagonal()
     c = 2;
     M = diag(a*ones(1,N)) + diag(b*ones(1,N-1),1) + diag(c*ones(1,N-1),-1);
 
-    R = zeros(10,1);
+    R = ones(10,1);
 
 end
