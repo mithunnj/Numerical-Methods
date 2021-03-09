@@ -1,3 +1,9 @@
+%{
+    Owner: Mithun Jothiravi (1002321258)
+    Description: This is the main project1 code back that is called to compute Tridiagonal Matrix
+        with computed properties.
+%}
+
 function [T,x]=jothiravi_1002321258_project1(properties, dimensions, n)
 
     % Fetch contents from input properties array
@@ -16,11 +22,11 @@ function [T,x]=jothiravi_1002321258_project1(properties, dimensions, n)
     R = zeros(n,1);
 
     x = L/n; % Delta x
-
+    
     for i=1:n
         A1 = 1 - ( (x*(i-0.5))*tan(rad_angle) );
         A2 = 1 - ( (x*(i+0.5))*tan(rad_angle) );
-        AC = x*i*cos(rad_angle);
+        AC = (x*i)*cos(rad_angle);
         h_x = h_b - ( ((h_b - h_t)/L )*x*i );
 
         if i == 1
@@ -51,7 +57,12 @@ function [T,x]=jothiravi_1002321258_project1(properties, dimensions, n)
         else
             % Calculate values
             e = ( (k*A1)/x );
-            f = (k*(A2)/x) - 2*h_x*AC;
+
+            disp(A2);
+            A2 = A2(1,1);
+            disp(A2);
+
+            f = (k*(sum(A2))/x) - 2*h_x*AC;
             g = (k*A2)/x;
             r = 2*h_x*AC*T_inf;
 

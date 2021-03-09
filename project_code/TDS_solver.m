@@ -1,9 +1,13 @@
-function [x] = TDS_solver(td, r)
-    %{
-        td: Tridiagonal matrix 
-        r: This is the forcing values represented in a r column vector
-    %}
+%{
+    Owner: Mithun Jothiravi (1002321258)
+    Description: Given a tridiagonal matrix, and r_values, the T solution will be solved.
 
+    td: Tridiagonal matrix 
+    r: This is the forcing values represented in a r column vector
+%}
+
+
+function [x] = TDS_solver(td, r)
     input_size = size(td);
 
     % Step 1: Calculate g_values

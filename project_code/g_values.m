@@ -1,10 +1,13 @@
-function [g_new] = g_values(td,n)
-    %{
-        td: Tridiagonal matrix 
-        n: Size of the tridagonal matrix in the form (# of rows, # of columns)
-            You can parse this like this: rows = n(1,1), columns = n(1,2) 
-    %}
+%{
+    Owner: Mithun Jothiravi (1002321258)
+    Description: Given a tridiagonal matrix, the g_values will be computed.
 
+    td: Tridiagonal matrix 
+    n: Size of the tridagonal matrix in the form (# of rows, # of columns)
+        You can parse this like this: rows = n(1,1), columns = n(1,2) 
+%}
+
+function [g_new] = g_values(td,n)
     g_new = []; % Initialize array to store all the computed g_values
 
     % Step 1: Loop through all the rows in the Tridiagonal Matrix
